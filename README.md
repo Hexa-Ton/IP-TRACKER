@@ -1,29 +1,177 @@
 🌐 IP-TRACKER
 
 <p align="center">
-  <b>Cross-Platform IP Intelligence Tool</b><br>
-  Public IP Lookup • Geolocation Insights • IP Analysis
+  <b>Cross-Platform IP Intelligence Tool</b>
 </p><p align="center">
-  🐉 Kali Linux &nbsp;•&nbsp; 🪟 Windows &nbsp;•&nbsp; 📱 Termux
+  Public IP Lookup · Geolocation Insights · IP Analysis · Visitor IP Demonstration
+</p><p align="center">
+  🐉 Kali Linux &nbsp;•&nbsp; 🪟 Windows &nbsp;•&nbsp; 📱 Termux &nbsp;•&nbsp; 🏔️ Alpine Linux
+</p><p align="center">
+  <b>Version 1.0.0</b>
 </p>---
 
-🚀 About
+📖 Overview
 
-IP-TRACKER is a cross-platform IP intelligence tool designed for public IP lookup, geolocation insights, IP information analysis, and consent-based visitor IP demonstrations.
+IP-TRACKER is a Python-based, cross-platform IP intelligence utility designed to provide public IP information, approximate geolocation insights, and network-related IP analysis through an interactive command-line interface.
 
-Built with Python and designed for a simple, interactive command-line experience.
+Built for simplicity, portability, and practical use across multiple operating environments, IP-TRACKER brings essential IP lookup functionality into one lightweight tool.
+
+Whether you're using Kali Linux, Windows, Termux, or Alpine Linux, IP-TRACKER provides a straightforward way to explore publicly available IP information.
 
 ✨ Features
 
-- 🌐 IP TRACKER — Retrieve public IP information.
-- 🔎 IP FINDER — Run a visitor IP demonstration server.
-- 📡 WHAT IS MY IP? — Check your current public IP address.
-- 📍 Geolocation Insights — View approximate IP-based location information.
-- 🛡️ IP Analysis — Display available IP and network-related information.
-- 🔗 SSH Tunnel — Share a local demonstration server through an SSH tunnel.
-- 💻 Cross-Platform — Kali Linux, Windows, and Termux support.
+Feature| Description
+🌐 IP TRACKER| Retrieve information about a public IP address
+🔎 IP FINDER| Run a visitor IP demonstration server
+📡 WHAT IS MY IP?| Check your current public IP address
+📍 Geolocation| View approximate IP-based location information
+🛡️ IP Analysis| Display available IP and network-related information
+🔗 SSH Tunnel| Share a local demonstration server through an SSH tunnel
+💻 Cross-Platform| Designed for multiple operating environments
+
+---
+
+🖥️ Installation
+
+Choose your operating system and follow the corresponding instructions.
+
+🐉 1. Kali Linux
+
+Step 1 — Update system packages
+
+sudo apt update && sudo apt upgrade -y
+
+Step 2 — Install requirements
+
+sudo apt install python3 python3-pip git openssh-client -y
+
+Step 3 — Clone the repository
+
+git clone https://github.com/Hexa-Ton/IP-TRACKER.git
+
+Step 4 — Enter the project directory
+
+cd IP-TRACKER
+
+Step 5 — Install IP-TRACKER
+
+chmod +x install.sh run.sh
+./install.sh
+
+Step 6 — Launch the tool
+
+./run.sh
+
+---
+
+🪟 2. Windows
+
+Requirements
+
+- Python 3
+- Git for Windows
+- PowerShell
+
+Step 1 — Clone the repository
+
+Open PowerShell and run:
+
+git clone https://github.com/Hexa-Ton/IP-TRACKER.git
+
+Step 2 — Enter the project directory
+
+cd IP-TRACKER
+
+Step 3 — Install IP-TRACKER
+
+powershell -ExecutionPolicy Bypass -File .\install.ps1
+
+Step 4 — Launch the tool
+
+powershell -ExecutionPolicy Bypass -File .\run.ps1
+
+---
+
+📱 3. Termux
+
+Step 1 — Update Termux packages
+
+pkg update && pkg upgrade -y
+
+Step 2 — Install requirements
+
+pkg install python git openssh bash -y
+
+Step 3 — Clone the repository
+
+git clone https://github.com/Hexa-Ton/IP-TRACKER.git
+
+Step 4 — Enter the project directory
+
+cd IP-TRACKER
+
+Step 5 — Install IP-TRACKER
+
+chmod +x install.sh run.sh
+./install.sh
+
+Step 6 — Launch the tool
+
+./run.sh
+
+🔗 SSH Tunnel Setup
+
+OpenSSH is required for SSH tunnel functionality.
+
+Install OpenSSH:
+
+pkg install openssh -y
+
+Verify installation:
+
+ssh -V
+
+---
+
+🏔️ 4. Alpine Linux
+
+IP-TRACKER includes a portable Bash installer designed to detect Alpine's "apk" package manager.
+
+Step 1 — Update Alpine packages
+
+sudo apk update
+
+Step 2 — Install requirements
+
+sudo apk add bash python3 py3-pip git openssh-client
+
+Step 3 — Clone the repository
+
+git clone https://github.com/Hexa-Ton/IP-TRACKER.git
+
+Step 4 — Enter the project directory
+
+cd IP-TRACKER
+
+Step 5 — Make scripts executable
+
+chmod +x install.sh run.sh
+
+Step 6 — Install IP-TRACKER
+
+./install.sh
+
+Step 7 — Launch the tool
+
+./run.sh
+
+«Alpine Note: The installer detects "apk" and can install Python packages. Alpine compatibility should be verified on the target Alpine release and environment before treating it as fully tested support. If you're using a minimal container, make sure Bash, Git, Python 3, and the SSH client are installed.»
+
+---
 
 📋 Main Menu
+
+IP-TRACKER provides an interactive command-line menu:
 
 01 IP TRACKER
 02 IP FINDER
@@ -31,100 +179,31 @@ Built with Python and designed for a simple, interactive command-line experience
 04 HELP & COMMANDS
 05 EXIT
 
----
+Interactive Prompt
 
-🖥️ Installation & Usage
-
-Choose your operating system and follow the instructions.
-
-1. 🐉 Kali Linux
-
-Install requirements:
-
-sudo apt update
-sudo apt install python3 python3-pip git openssh-client -y
-
-Clone repository:
-
-git clone https://github.com/Hexa-Ton/IP-TRACKER.git
-
-Enter project directory:
-
-cd IP-TRACKER
-
-Install:
-
-chmod +x install.sh run.sh
-./install.sh
-
-Run:
-
-./run.sh
+IP-TRACKER (^• •^) >>
 
 ---
 
-2. 🪟 Windows
+🔗 IP FINDER — Demonstration Modes
 
-Requirements:
+IP FINDER provides two hosting modes for its visitor IP demonstration.
 
-- Python 3
-- Git for Windows
-- PowerShell
+1. Localhost Mode
 
-Clone repository:
+- Starts a local demonstration server.
+- Default address: "http://127.0.0.1:8080"
+- Intended for access from the same device.
+- Does not require a public SSH tunnel.
 
-git clone https://github.com/Hexa-Ton/IP-TRACKER.git
+2. SSH Tunnel Mode
 
-Enter project directory:
+- Uses an SSH reverse tunnel through localhost.run.
+- Can provide a public HTTPS link for remote access.
+- Requires OpenSSH and an active internet connection.
+- Public tunnel availability depends on the third-party provider.
 
-cd IP-TRACKER
-
-Install:
-
-powershell -ExecutionPolicy Bypass -File .\install.ps1
-
-Run:
-
-powershell -ExecutionPolicy Bypass -File .\run.ps1
-
----
-
-3. 📱 Termux
-
-Update packages:
-
-pkg update && pkg upgrade -y
-
-Install requirements:
-
-pkg install python git openssh nano -y
-
-Clone repository:
-
-git clone https://github.com/Hexa-Ton/IP-TRACKER.git
-
-Enter project directory:
-
-cd IP-TRACKER
-
-Install:
-
-chmod +x install.sh run.sh
-./install.sh
-
-Run:
-
-./run.sh
-
-🔗 SSH Tunnel Requirements
-
-For SSH tunnel functionality, install OpenSSH:
-
-pkg install openssh -y
-
-Check SSH installation:
-
-ssh -V
+Important: Public tunnel services may change their availability, policies, or connection requirements.
 
 ---
 
@@ -132,37 +211,77 @@ ssh -V
 
 Requirement| Purpose
 Python 3| Application runtime
+Bash| Linux shell scripts
 Git| Repository cloning
 OpenSSH| SSH tunnel functionality
-Internet| Public IP and geolocation lookups
+Internet connection| Public IP and geolocation lookups
 
 ---
 
-🔗 IP FINDER Modes
+🛠️ Troubleshooting
 
-Localhost Mode
+Python 3 not found
 
-- Runs the demonstration server on the local device.
-- Default address: "http://127.0.0.1:8080"
-- Intended for same-device access.
+Install Python 3 using your platform's package manager.
 
-SSH Tunnel Mode
+Kali Linux:
 
-- Uses an SSH reverse tunnel through localhost.run.
-- Can provide a public HTTPS link for remote access.
-- Requires OpenSSH and an internet connection.
+sudo apt install python3 -y
+
+Termux:
+
+pkg install python -y
+
+Alpine Linux:
+
+sudo apk add python3
+
+Permission denied
+
+Make the shell scripts executable:
+
+chmod +x install.sh run.sh
+
+SSH command not found
+
+Install OpenSSH for your operating system.
+
+Kali Linux:
+
+sudo apt install openssh-client -y
+
+Termux:
+
+pkg install openssh -y
+
+Alpine Linux:
+
+sudo apk add openssh-client
 
 ---
 
-⚠️ Disclaimer
+🔐 Privacy & Responsible Use
 
-IP-TRACKER is intended for educational, informational, and authorized testing purposes.
+IP-TRACKER uses publicly available IP information and provides a visitor IP demonstration feature.
 
-- IP geolocation is approximate and is not GPS tracking.
+Please keep the following points in mind:
+
+- IP-based geolocation is approximate and does not provide GPS-level location.
 - A public IP address does not necessarily identify a specific person or device.
 - VPNs, proxies, and carrier-grade NAT may affect IP information.
-- Visitor IP demonstrations should be transparent and consent-based.
-- Users are responsible for complying with applicable laws and regulations.
+- Visitor IP demonstrations should clearly disclose IP collection and obtain appropriate consent.
+- Browser-based public IP lookup services may receive the visitor's public IP address.
+- Never use this tool for unauthorized tracking, harassment, or unlawful activities.
+
+---
+
+⚖️ Disclaimer
+
+IP-TRACKER is provided for educational, informational, and authorized testing purposes.
+
+The developer is not responsible for misuse, unauthorized activity, or damages arising from the use of this software.
+
+Users are solely responsible for ensuring that their use of IP-TRACKER complies with applicable laws and regulations.
 
 ---
 
@@ -172,12 +291,37 @@ Hexa Ton
 
 GitHub: "@Hexa-Ton" (https://github.com/Hexa-Ton)
 
-Repository: "IP-TRACKER" (https://github.com/Hexa-Ton/IP-TRACKER)
+Project Repository:
+
+"https://github.com/Hexa-Ton/IP-TRACKER" (https://github.com/Hexa-Ton/IP-TRACKER)
+
+---
+
+📜 License
+
+This project is licensed under the MIT License.
+
+See the "LICENSE" (LICENSE) file for details.
+
+---
+
+⭐ Support the Project
+
+If you find IP-TRACKER useful:
+
+- ⭐ Star this repository.
+- 🍴 Fork the project.
+- 🐛 Report issues and bugs.
+- 💡 Share suggestions for improvements.
 
 ---
 
 <p align="center">
   ⭐ If you like this project, consider giving it a star!
-</p><p align="center">
-  Made by Hexa Ton
+  <br><br>
+  <b>IP-TRACKER v1.0</b>
+</p>
+
+<p align="center">
+  Crafted by <b>Hexa Ton</b>
 </p>
