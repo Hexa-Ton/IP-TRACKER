@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""IP-TRACKER 1.0.0 — Termux-first public IP lookup utility."""
+"""IP-TRACKER 1.0 — Termux-first public IP lookup utility."""
 from __future__ import annotations
 import argparse, ipaddress, json, socket, sys, time, shutil
 import subprocess, threading, re
@@ -9,7 +9,7 @@ from urllib.error import HTTPError, URLError
 from urllib.parse import quote, parse_qs
 from urllib.request import Request, urlopen
 
-VERSION = "1.0.0"
+VERSION = "1.0"
 API_BASE = "https://ipwho.is/"
 TIMEOUT = 12
 MAX_BULK = 25

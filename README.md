@@ -5,9 +5,9 @@
 </p><p align="center">
   Public IP Lookup · Geolocation Insights · IP Analysis · Visitor IP Demonstration
 </p><p align="center">
-  🐉 Kali Linux &nbsp;•&nbsp; 🪟 Windows &nbsp;•&nbsp; 📱 Termux &nbsp;•&nbsp; 🏔️ Alpine Linux
+  🐉 Kali Linux &nbsp;|&nbsp; 🪟 Windows &nbsp;|&nbsp; 📱 Termux &nbsp;|&nbsp; 🏔️ Alpine Linux
 </p><p align="center">
-  <b>Version 1.0.0</b>
+  <b>Version 1.0</b>
 </p>---
 
 📖 Overview
@@ -38,30 +38,30 @@ Choose your operating system and follow the corresponding instructions.
 🐉 1. Kali Linux
 
 Step 1 — Update system packages
-
+```bash
 sudo apt update && sudo apt upgrade -y
-
+```
 Step 2 — Install requirements
-
+```bash
 sudo apt install python3 python3-pip git openssh-client -y
-
+```
 Step 3 — Clone the repository
-
+```bash
 git clone https://github.com/Hexa-Ton/IP-TRACKER.git
-
+```
 Step 4 — Enter the project directory
-
+```bash
 cd IP-TRACKER
-
+```
 Step 5 — Install IP-TRACKER
-
+```bash
 chmod +x install.sh run.sh
 ./install.sh
-
+```
 Step 6 — Launch the tool
-
+```bash
 ./run.sh
-
+```
 ---
 
 🪟 2. Windows
@@ -75,62 +75,62 @@ Requirements
 Step 1 — Clone the repository
 
 Open PowerShell and run:
-
+```bash
 git clone https://github.com/Hexa-Ton/IP-TRACKER.git
-
+```
 Step 2 — Enter the project directory
-
+```bash
 cd IP-TRACKER
-
+```
 Step 3 — Install IP-TRACKER
-
+```bash
 powershell -ExecutionPolicy Bypass -File .\install.ps1
-
+```
 Step 4 — Launch the tool
-
+```bash
 powershell -ExecutionPolicy Bypass -File .\run.ps1
-
+```
 ---
 
 📱 3. Termux
 
 Step 1 — Update Termux packages
-
+```bash
 pkg update && pkg upgrade -y
-
+```
 Step 2 — Install requirements
-
+```bash
 pkg install python git openssh bash -y
-
+```
 Step 3 — Clone the repository
-
+```bash
 git clone https://github.com/Hexa-Ton/IP-TRACKER.git
-
+```
 Step 4 — Enter the project directory
-
+```bash
 cd IP-TRACKER
-
+```
 Step 5 — Install IP-TRACKER
-
+```bash
 chmod +x install.sh run.sh
 ./install.sh
-
+```
 Step 6 — Launch the tool
-
+```bash
 ./run.sh
-
+```
 🔗 SSH Tunnel Setup
 
 OpenSSH is required for SSH tunnel functionality.
 
 Install OpenSSH:
-
+```bash
 pkg install openssh -y
-
+```
 Verify installation:
-
+```bash
 ssh -V
-
+```
 ---
 
 🏔️ 4. Alpine Linux
@@ -138,35 +138,36 @@ ssh -V
 IP-TRACKER includes a portable Bash installer designed to detect Alpine's "apk" package manager.
 
 Step 1 — Update Alpine packages
-
+```bash
 sudo apk update
-
+```
 Step 2 — Install requirements
-
+```bash
 sudo apk add bash python3 py3-pip git openssh-client
-
+```
 Step 3 — Clone the repository
-
+```bash
 git clone https://github.com/Hexa-Ton/IP-TRACKER.git
-
+```
 Step 4 — Enter the project directory
-
+```bash
 cd IP-TRACKER
-
+```
 Step 5 — Make scripts executable
-
+```bash
 chmod +x install.sh run.sh
-
+```
 Step 6 — Install IP-TRACKER
-
+```bash
 ./install.sh
-
+```
 Step 7 — Launch the tool
-
+```bash
 ./run.sh
 
-«Alpine Note: The installer detects "apk" and can install Python packages. Alpine compatibility should be verified on the target Alpine release and environment before treating it as fully tested support. If you're using a minimal container, make sure Bash, Git, Python 3, and the SSH client are installed.»
 
+«Alpine Note: The installer detects "apk" and can install Python packages. Alpine compatibility should be verified on the target Alpine release and environment before treating it as fully tested support. If you're using a minimal container, make sure Bash, Git, Python 3, and the SSH client are installed.»
+```
 ---
 
 📋 Main Menu
